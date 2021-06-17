@@ -20,6 +20,7 @@ namespace WiredBrainCoffee.ShopInfoTool
 
                 if (string.Equals("help", line, StringComparison.OrdinalIgnoreCase))
                 {
+                    // Yay!
                     Console.WriteLine("> Available coffee shop commands:");
                     foreach (var shop in coffeeShops)
                     {
