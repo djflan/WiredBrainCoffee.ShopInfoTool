@@ -15,14 +15,11 @@ namespace WiredBrainCoffee.ShopInfoTool
             var coffeeShopDataProvider = new CoffeeShopDataProvider();
             var coffeeShops = coffeeShopDataProvider.LoadCoffeeShops().ToList();
 
-            while (true)
-            {
-                var line = Console.ReadLine();
+            var line = string.Empty;
 
-                if (string.Equals("quit", line, StringComparison.OrdinalIgnoreCase))
-                {
-                    break;
-                }
+            while (!string.Equals("quit", line, StringComparison.OrdinalIgnoreCase))
+            {
+                line = Console.ReadLine();
 
                 if (string.Equals("help", line, StringComparison.OrdinalIgnoreCase))
                 {
