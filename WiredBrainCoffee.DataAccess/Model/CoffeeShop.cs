@@ -7,5 +7,7 @@
         public double BeansInStockInKg { get; set; }
 
         public double BeansInStockInLb => BeansInStockInKg / 2.2;
+
+        public int PaperCupsInStock { get; set; };
     }
 }
