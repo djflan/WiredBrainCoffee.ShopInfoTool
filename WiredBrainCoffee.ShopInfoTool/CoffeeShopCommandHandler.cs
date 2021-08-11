@@ -31,7 +31,7 @@ namespace WiredBrainCoffee.ShopInfoTool
                 var matchedShop = matchingShops.First();
 
                 Console.Out.WriteLine($"> Location: {matchedShop.Location}.\n" +
-                                      $"> Beans in stock: {matchedShop.BeansInStockInKg} kg.\n" +
+                                      $"> Beans in stock: {matchedShop.BeansInStockInLb} lbs.\n" +
                                       $"> Paper cups in stock: {matchedShop.PaperCupsInStock}.");
             }
 
