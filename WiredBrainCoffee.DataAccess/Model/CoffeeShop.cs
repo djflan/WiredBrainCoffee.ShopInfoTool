@@ -8,8 +8,6 @@ namespace WiredBrainCoffee.DataAccess.Model
 
         public double BeansInStockInKg { get; set; }
 
-        public double BeansInStockInLb => Math.Round(BeansInStockInKg / 2.2, 2);
-
         public int PaperCupsInStock { get; set; }
     }
 }
