@@ -27,6 +27,13 @@ namespace WiredBrainCoffee.DataAccess
                 BeansInStockInKg = 56,
                 PaperCupsInStock = 1056
             };
+
+            yield return new CoffeeShop
+            {
+                Location = "Memphis",
+                BeansInStockInKg = 14,
+                PaperCupsInStock = 10
+            };
         }
     }
 }

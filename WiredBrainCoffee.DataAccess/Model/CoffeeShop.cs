@@ -1,4 +1,6 @@
-﻿namespace WiredBrainCoffee.DataAccess.Model
+﻿using System;
+
+namespace WiredBrainCoffee.DataAccess.Model
 {
     public class CoffeeShop
     {
@@ -6,8 +8,8 @@
 
         public double BeansInStockInKg { get; set; }
 
-        public double BeansInStockInLb => BeansInStockInKg / 2.2;
+        public double BeansInStockInLb => Math.Round(BeansInStockInKg / 2.2, 2);
 
-        public int PaperCupsInStock { get; set; };
+        public int PaperCupsInStock { get; set; }
     }
 }
