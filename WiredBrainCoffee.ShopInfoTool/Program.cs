@@ -29,6 +29,35 @@ namespace WiredBrainCoffee.ShopInfoTool
                         Console.WriteLine($"> {shop.Location}");
                     }
                 }
+                else
+                {
+                    var matchingShops = coffeeShops.Where(cs =>
+                        cs.Location.StartsWith(line, StringComparison.OrdinalIgnoreCase)).ToList();
+
+                    if (!matchingShops.Any())
+                    {
+                        Console.WriteLine($"> Invalid command '{line}'");
+                    }
+
+                    if (matchingShops.Count == 1)
+                    {
+                        var matchedShop = matchingShops.First();
+
+                        Console.Out.WriteLine($"> Location: {matchedShop.Location}.\n" + 
+                                              $"> Beans in stock: {matchedShop.BeansInStockInKg} kg.\n" +
+                                              $"> Paper cups in stock: {matchedShop.PaperCupsInStock}.");
+                    }
+
+                    if (matchingShops.Count > 1)
+                    {
+                        Console.Out.WriteLine($"> Multiple locations found for {line}:");
+
+                        foreach (var matchingShop in matchingShops)
+                        {
+                            Console.Out.WriteLine($"> {matchingShop.Location}");
+                        }
+                    }
+                }
             }
         }
     }
